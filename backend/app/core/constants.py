@@ -1,0 +1,1 @@
+RESULTS_CHANNEL = "results:updates"
