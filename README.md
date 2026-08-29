@@ -1,81 +1,116 @@
-## This project was originally written in Portuguese and then translated into English. 🇧🇷 🇺🇸
+<h1 align="center">🗳️ Electoral System — V.1.0</h1>
 
-# 🗳️ Web-based Electoral System - 2026 Elections
+<h3 align="center">Secure, Transparent, and High-Performance Digital Voting Infrastructure</h3>
 
-An interactive and modern voting system developed in **Python** using the **Flask** micro-framework, with local data persistence in *JSON* format and a clean web interface (HTML5/CSS3).
+<p align="center">
+  <img src="https://img.shields.io/badge/Progress-Backend_Architecting-FFA500?style=for-the-badge&labelColor=0D1117" alt="Backend in progress"/>
+  <img src="https://img.shields.io/badge/Security-Cryptographic_Auditing-2EA44F?style=for-the-badge&labelColor=0D1117" alt="Security"/>
+  <img src="https://img.shields.io/badge/Architecture-Microservices_Ready-3776AB?style=for-the-badge&labelColor=0D1117" alt="Architecture"/>
+</p>
 
-> ⚠️ **DEVELOPMENT NOTICE:** This project is under development. The simulated voting process is currently based on a direct click on the candidate displayed in the user interface. In the future, the system will be updated to reflect the real electoral system, allowing a single vote by typing the candidate's number into an interface that simulates a real electronic voting machine.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png" width="100%">
+</p>
 
-> ⚠️ **Disclaimer:** This project was developed for strictly academic and educational purposes for the study of software architecture (Flask/Python/JSON). The application has no connection whatsoever with political parties, coalitions, or real candidates, serving only as a practical programming learning tool.
----
+<p align="center">
+  This project is an advanced, production-grade <b>Electoral System</b> designed to provide robust security, high concurrency handling, and full auditability for digital democratic processes. Built from the ground up with a focus on cryptographic integrity and real-time data processing.
+</p>
 
-## 🚀 Current Features
+<table align="center">
+  <tr>
+    <td align="center">📂</td>
+    <td><b>Architecture:</b> Modular workspace separating core backend logic, asynchronous caching layers, and isolated container environments to ensure enterprise-grade scalability.</td>
+  </tr>
+  <tr>
+    <td align="center">🗓️</td>
+    <td><b>Timeline:</b> Active development phase focusing on core API logic, cryptographic vote immutability, and end-to-end integration testing.</td>
+  </tr>
+  <tr>
+    <td align="center">🔔</td>
+    <td><b>Updates:</b> Follow architectural deep-dives, development milestones, and the official project release announcement on LinkedIn.</td>
+  </tr>
+</table>
 
-* **Responsive Web Interface:** Minimalist and intuitive dark mode panel for counting votes without distractions.
-* **Back-End Architecture:** Local web server running clean HTTP routes, handling `GET` (display) and `POST` (vote counting) requests.
-* **Data Persistence:** Votes are recorded and updated in real time in the `votes.json` file. If the server is shut down, no data is lost.
-* **Isolated Environment:** Ready-to-use configuration with a virtual environment (`venv`), keeping project dependencies organized.
-
-## 📁 Project Structure
-
-```text
-sistema-eleitoral-web/
-│
-├── static/
-│   └── style.css       # Page styling and design (CSS)
-│
-├── templates/
-│   └── index.html      # Ballot box structure and interface (HTML)
-│
-├── app.py              # Main server and application routes (Flask)
-├── votos.json          # Local database where votes are stored.
-└── .gitignore          # File to ignore useless local files in Git
-```
-
-## 🛠️ Technologies Used
-
-* **Python 3.x**
-* **Flask** (Micro-framework web)
-* **JSON** (Data storage and persistence)
-* **HTML5 e CSS3** (Front-End)
+<p align="center">
+  <a href="https://www.linkedin.com/in/felipe-de-la-vega-dev/">
+    <img src="https://img.shields.io/badge/LinkedIn-Follow_for_updates-0A66C2?style=for-the-badge&logo=linkedin&logoColor=FFFFFF" alt="LinkedIn"/>
+  </a>
+</p>
 
 ---
 
-## 🔧 How to Run the Project Locally
+## 🏛️ System Core Architecture & Specifications
 
-Follow the steps below in your VS Code terminal to run the application:
+The system is structured around strict security baselines, ensuring that voter anonymity is preserved while vote immutability and precise tallying are mathematically guaranteed.
 
-### 1. Clone the Repository
-```bash
-git clone [https://github.com/felipe2008pg1/sistema-eleitoral.git](https://github.com/felipe2008pg1/sistema-eleitoral.git)
-cd sistema-eleitoral
-```
+<div align="center">
 
-### 2. Create and Activate the Virtual Environment (venv)
-* **In Windows (PowerShell):**
-  ```powershell
-  python -m venv venv
-  .\venv\Scripts\Activate.ps1
-  ```
-* **No Linux/Mac:**
-  ```bash
-  python3 -m venv venv
-  source venv/bin/activate
-  ```
+| Module | Core Responsibility | Technologies & Protocols |
+| :--- | :--- | :--- |
+| **API Gateway** | Request handling, routing, and input validation | `FastAPI`, `Pydantic v2`, `Uvicorn` |
+| **Auth & Security** | Voter verification, rate-limiting, and DDoS defense | `JWT`, `Bcrypt`, `SlowAPI`, `CPF Validation` |
+| **Queue & Caching** | High-throughput vote ingestion and concurrency spike management | `Redis`, `Asyncio Queues` |
+| **Persistent Storage** | Relational state management and secure migrations | `PostgreSQL`, `Supabase`, `SQLAlchemy`, `Alembic` |
+| **Auditing & Logs** | Tamper-evident logging and Merkle-style hash chaining | Cryptographic Hash Verification |
 
-### 3. Install the dependences
-With `(venv)` active in your terminal, install Flask.:
-```bash
-pip install flask
-```
-
-### 4. Run the Web Server
-Run the main project file:
-```bash
-python app.py
-```
-
-After running the program, open your browser and access the local address provided by the terminal (usually `http://127.0.0.1:5000`).
+</div>
 
 ---
-Developed with a focus on back-end logic by [Felipe de la Vega Gonzalez](https://github.com/felipe2008pg1) 🧑‍💻
+
+## 🚀 Key Technical Pillars
+
+<table align="center" width="100%">
+  <tr>
+    <td width="33%" align="center">
+      <h3>🔒<br>Security & Compliance</h3>
+      <p>Strict CPF validation checks, multi-layer authentication rules, and strict defense against botting, injection, and volumetric attacks.</p>
+    </td>
+    <td width="33%" align="center">
+      <h3>⚡<br>High Concurrency</h3>
+      <p>Asynchronous request handling powered by Python and Redis caching tiers to withstand massive surges of concurrent vote traffic.</p>
+    </td>
+    <td width="33%" align="center">
+      <h3>🔍<br>Absolute Auditability</h3>
+      <p>Immutable logging structures ensuring that every cast vote can be independently audited without compromising individual voter privacy.</p>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ Technology Stack
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/FastAPI-0.115%2B-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-Supabase-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Redis-Queue_&_Cache-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis"/>
+  <img src="https://img.shields.io/badge/Docker-Containerization-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+</p>
+
+---
+
+## 📈 Project Status & Roadmap
+
+```mermaid
+gitGraph
+    commit id: "Init"
+    commit id: "Spec & Architecture"
+    branch backend
+    checkout backend
+    commit id: "FastAPI Boilerplate"
+    commit id: "Database Schemas & Supabase"
+    commit id: "Redis Queue Integration"
+    checkout main
+    merge backend
+    branch security
+    checkout security
+    commit id: "Crypto Hash Chaining"
+    commit id: "Rate Limiting & DDoS Defense"
+    checkout main
+    merge security
+    branch frontend
+    checkout frontend
+    commit id: "UI Wireframes & Integration"
+    checkout main
+    merge frontend tag: "v1.0-RC"
